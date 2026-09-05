@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
 
+import { Helmet } from "react-helmet-async";
+
 export default function About() {
   const approach = [
     {
@@ -21,6 +23,20 @@ export default function About() {
 
   return (
     <>
+
+      <Helmet>
+        <title>About TJ Interio | Interior Design Company in Jaipur</title>
+
+        <meta
+          name="description"
+          content="Learn about TJ Interio, an interior design company in Jaipur creating stylish and functional home, kitchen, wardrobe and office interiors."
+        />
+
+        <link
+          rel="canonical"
+          href="https://yourdomain.com/about"
+        />
+      </Helmet>
       {/* About Hero Section */}
       <section className="section py-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">

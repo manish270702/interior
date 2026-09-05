@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import QuoteForm from "../components/QuoteForm";
 
+import { Helmet } from "react-helmet-async";
+
 const content = {
   kitchen: {
     title: "Modular Kitchens",
+    seoTitle: "Modular Kitchen Designers in Jaipur | TJ Interio",
+    seoDescription:
+      "TJ Interio offers stylish modular kitchen design services in Jaipur including straight, L-shaped, U-shaped and parallel kitchens customized for your home.",
     intro:
       "Beautifully planned kitchens that balance style, storage and everyday functionality.",
     image:
@@ -26,12 +31,14 @@ const content = {
         title: "Parallel Kitchen",
         image: "https://ik.imagekit.io/x8rvzz4ku/uploads/olive.png",
       },
-
     ],
   },
 
   wardrobe: {
     title: "Modular Wardrobes",
+    seoTitle: "Custom Wardrobe Designers in Jaipur | TJ Interio",
+    seoDescription:
+      "Explore customized modular wardrobe designs in Jaipur including sliding wardrobes, hinged wardrobes, walk-in wardrobes and loft storage solutions.",
     intro:
       "Smart storage solutions with finishes and configurations designed for your bedroom.",
     image:
@@ -39,36 +46,57 @@ const content = {
     options: [
       {
         title: "Sliding Wardrobe",
-        image: ""
+        image: "",
       },
       {
         title: "Hinged Wardrobe",
-        image: ""
+        image: "",
       },
       {
         title: "Walk-in Wardrobe",
-        image: ""
+        image: "",
       },
       {
         title: "Loft Storage",
-        image: ""
+        image: "",
       },
     ],
   },
 
   interior: {
     title: "Complete Home Interiors",
+    seoTitle: "Home Interior Designers in Jaipur | TJ Interio",
+    seoDescription:
+      "TJ Interio provides complete home interior design services in Jaipur for living rooms, bedrooms, dining rooms, TV units, study rooms and pooja rooms.",
     intro:
       "A cohesive interior for every room, from the living room to the bedroom and beyond.",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=90",
     options: [
-      "Living Room",
-      "Bedroom",
-      "Dining Room",
-      "TV Unit",
-      "Study Room",
-      "Pooja Room",
+      {
+        title: "Living Room",
+        image: "",
+      },
+      {
+        title: "Bedroom",
+        image: "",
+      },
+      {
+        title: "Dining Room",
+        image: "",
+      },
+      {
+        title: "TV Unit",
+        image: "",
+      },
+      {
+        title: "Study Room",
+        image: "",
+      },
+      {
+        title: "Pooja Room",
+        image: "",
+      },
     ],
   },
 };
@@ -78,12 +106,29 @@ export default function ServicePage({ type }) {
 
   return (
     <>
+
+      <Helmet>
+        <title>
+          {c.title} in Jaipur | TJ Interio
+        </title>
+
+        <meta
+          name="description"
+          content={`${c.intro} TJ Interio provides customized ${c.title.toLowerCase()} services in Jaipur with modern designs and quality finishes.`}
+        />
+
+        <link
+          rel="canonical"
+          href={`https://your-domain.onrender.com/services/${type}`}
+        />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-[520px] overflow-hidden">
         <img
           src={c.image}
           className="absolute inset-0 h-full w-full object-cover"
-          alt={c.title}
+          alt={`${c.title} by TJ Interio in Jaipur`}
         />
 
         <div className="absolute inset-0 bg-black/45" />

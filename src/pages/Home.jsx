@@ -5,6 +5,8 @@ import { services, projects } from "../data";
 import ProjectCard from "../components/ProjectCard";
 import QuoteForm from "../components/QuoteForm";
 
+import { Helmet } from "react-helmet-async";
+
 export default function Home() {
   const features = [
     {
@@ -27,6 +29,25 @@ export default function Home() {
 
   return (
     <>
+
+      <Helmet>
+        <title>TJ Interio | Interior Designers in Jaipur</title>
+
+        <meta
+          name="description"
+          content="TJ Interio offers modern home interiors, modular kitchens, wardrobes and office interior design services in Jaipur."
+        />
+
+        <meta
+          name="keywords"
+          content="interior designers in Jaipur, home interior Jaipur, modular kitchen Jaipur, wardrobe design Jaipur"
+        />
+
+        <link
+          rel="canonical"
+          href="https://yourdomain.com/"
+        />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-[680px] overflow-hidden">
         <img
