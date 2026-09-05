@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #1d1d1b; background: #f7f4ee; font-family: Inter, sans-serif; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+* { box-sizing: border-box; }
+button, input, textarea, select { font: inherit; }
+
+.section { @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-10; }
+.display { @apply font-display; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-sand; }
+.btn-light { @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-sand hover:text-white; }
+.card { @apply overflow-hidden rounded-2xl bg-white shadow-sm; }
