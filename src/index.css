@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -15,3 +32,7 @@ button, input, textarea, select { font: inherit; }
 .btn-primary { @apply inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-sand; }
 .btn-light { @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:bg-sand hover:text-white; }
 .card { @apply overflow-hidden rounded-2xl bg-white shadow-sm; }
+
+.display {
+  font-family: "Playfair Display", serif;
+}
